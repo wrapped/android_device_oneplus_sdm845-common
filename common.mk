@@ -22,8 +22,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -56,10 +55,6 @@ PRODUCT_PACKAGES += \
 # Boot control
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
-
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -109,7 +104,6 @@ PRODUCT_COPY_FILES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon
 
 # Update engine
