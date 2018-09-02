@@ -125,7 +125,3 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk_package
