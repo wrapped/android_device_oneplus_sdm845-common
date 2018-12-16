@@ -132,6 +132,15 @@ PRODUCT_PACKAGES += \
     init.special_power.sh \
     init.spectrum.sh
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    ims-ext-common \
+    qti-telephony-common
+    
+ PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # tri-state-key
 PRODUCT_PACKAGES += \
     KeyHandler \
