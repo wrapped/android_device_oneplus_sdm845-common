@@ -16,6 +16,9 @@
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product, vendor/extras/configs/phone-xxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, vendor/extras/configs/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, device/oneplus/extras/common.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -61,12 +64,8 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan \
-    DisplayMode
+    libvulkan
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -101,9 +100,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# Pocket mode
-PRODUCT_PACKAGES += \
-    OnePlusPocketMode
 
 # Power
 PRODUCT_PACKAGES += \

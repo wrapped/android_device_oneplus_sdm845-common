@@ -27,13 +27,13 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a75
+TARGET_CPU_VARIANT := kryo300
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a75
+TARGET_2ND_CPU_VARIANT := kryo
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -42,7 +42,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm845
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := redflare_defconfig
+TARGET_KERNEL_CONFIG := flash_defconfig
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.avb_version=0.0 androidboot.vbmeta.avb_version=0.0
@@ -53,10 +53,10 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
+TARGET_KERNEL_SOURCE := kernel/oneplus/op6
 # GCC (Reqiures https://gitlab.com/anirudhgupta109/gcc-prebuilts/tree/8.2.1
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
-KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-8.2/bin
+# TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+# KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-8.2/bin
 # Clang
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 8.0.6
@@ -102,9 +102,6 @@ TARGET_USES_HWC2 := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := \
-    org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
@@ -129,7 +126,7 @@ TARGET_USES_MKE2FS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := odm op1 op2
+BOARD_ROOT_EXTRA_FOLDERS := odm op1 #op2
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist \
     /vendor/bt_firmware:/bt_firmware \
@@ -137,10 +134,10 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware
 
 # Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+B#OARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
