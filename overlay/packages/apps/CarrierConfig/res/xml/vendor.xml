@@ -1659,6 +1659,7 @@
     <carrier_config mcc="311" mnc="480">
         <boolean name="support_video_conference_call_bool" value="false" />
         <boolean name="carrier_volte_available_bool" value="true" />
+	<boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="support_downgrade_vt_to_audio_bool" value="true" />
         <boolean name="allow_emergency_video_calls_bool" value="true" />
         <boolean name="emergency_sms_support_bool" value="true" />
