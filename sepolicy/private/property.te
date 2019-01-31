@@ -1,1 +1,12 @@
 type vendor_camera_prop, property_type;
+#type hal_camera_default, property_type;
+#type hal_wifi_default, property_type;
+#type vendor_tombstone_data_file, property_type;
+#type diag_device, property_type;
+#type rild, property_type;
+#type vendor_pd_locater_dbg_prop, property_type;
+type camera_prop, property_type;
+#type qti_debugfs, property_type;
+#type time_daemon, property_type;
+type persist_dpm_prop, property_type;
+
