@@ -1,4 +1,44 @@
+# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
+#    * Neither the name of The Linux Foundation nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+allow priv_app asec_apk_file:dir getattr;
+allow priv_app bt_firmware_file:filesystem getattr;
+allow priv_app configfs:dir read;
+allow priv_app mnt_media_rw_file:dir getattr;
+allow priv_app mnt_vendor_file:lnk_file getattr;
+allow priv_app nfc_data_file:dir getattr;
+allow priv_app dpmtcm_socket:sock_file w_file_perms;
+allow priv_app dpmwrapper_socket:sock_file w_file_perms;
+allow priv_app dpmd:unix_stream_socket connectto;
 allow priv_app firmware_file:filesystem getattr;
 allow priv_app op1_file:filesystem getattr;
+allow priv_app op2_file:dir getattr;
+allow priv_app postinstall_mnt_dir:dir getattr;
+allow priv_app radio_data_file:dir getattr;
+allow priv_app system_app_data_file:dir getattr;
 allow priv_app sysfs:file read;
 

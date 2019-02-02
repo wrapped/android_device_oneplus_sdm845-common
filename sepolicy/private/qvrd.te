@@ -25,7 +25,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type qvrd, domain, coredomain;
 typeattribute qvrd coredomain;
 typeattribute qvrd mlstrustedsubject;
 type qvrd_exec, exec_type, file_type;
@@ -89,5 +88,5 @@ userdebug_or_eng(`
 allow qvrd appdomain:process setsched;
 
 # whitelisting ioctlcmd c302
-#allow qvrd self:socket ioctl msm_sock_ipc_ioctls_system;
+allowxperm qvrd self:socket ioctl msm_sock_ipc_ioctls_system;
 allow qvrd self:socket ioctl;

@@ -25,7 +25,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type vendor_mmi_sys, domain;
 
 #mmi_sys basic
 r_dir_file(vendor_mmi_sys, sysfs_graphics)

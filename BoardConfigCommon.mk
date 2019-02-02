@@ -1,5 +1,5 @@
 
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2019 Dirty Unicorns Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -105,27 +105,18 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
 # Sepolicy
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 include $(COMMON_PATH)/sepolicy/sepolicy.mk
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := odm op1 op2
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist \
-    /vendor/bt_firmware:/bt_firmware \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware
+    /mnt/vendor/persist:/persist 
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
-
-# Inherit from oneplus-extras
-#$(call inherit-product, device/oneplus/extras/common.mk)
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
