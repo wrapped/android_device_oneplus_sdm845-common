@@ -1,0 +1,9 @@
+﻿on post-fs
+    mkdir /mnt/vendor/persist/camera
+    chown system system /mnt/vendor/persist/camera
+    mkdir /mnt/vendor/persist/dual_camera_calibration 0777 system system
+
+on boot
+    # camera. enable mobicat
+    setprop persist.camera.mobicat 2
+    setprop persist.camera.stats.debugexif 3080192

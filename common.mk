@@ -15,6 +15,7 @@
 #
 
 # Get non-open-source specific aspects
+$(call inherit-product, device/oneplus/sdm845-common/hidl/hidl.mk)
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 $(call inherit-product, device/oneplus/extras/common.mk)
 
@@ -98,7 +99,14 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom
+    power.qcom:64
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # QTI
 PRODUCT_COPY_FILES += \

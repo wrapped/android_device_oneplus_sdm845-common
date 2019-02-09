@@ -1,3 +1,17 @@
 allow untrusted_app camera_prop:file read;
 allow untrusted_app camera_prop:file open;
+allow untrusted_app camera_prop:file getattr;
+
+allow untrusted_app qti_debugfs:dir search;
+allow untrusted_app proc:dir search;
+allow untrusted_app debugfs:dir search;
+
+unix_socket_connect(untrusted_app, qvrd, qvrd);
+allow untrusted_app qvrd:fd use;
+
+type time_daemon, domain;
+allow untrusted_app time_daemon:unix_stream_socket connectto;
+
+
+
 
