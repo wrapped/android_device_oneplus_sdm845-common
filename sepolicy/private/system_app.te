@@ -3,5 +3,4 @@ allow system_app default_android_service:service_manager add;
 allow system_app cnd_vendor_prop:file read;
 allow system_app qti_debugfs:dir search;
 allow system_app socket_device:sock_file write;
-allow system_app cnd_vendor_prop:file open;
 

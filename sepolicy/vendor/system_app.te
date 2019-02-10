@@ -1,2 +1,2 @@
 allow system_app fs_bpf:dir search;
-
+allow system_app cnd_vendor_prop:file open;

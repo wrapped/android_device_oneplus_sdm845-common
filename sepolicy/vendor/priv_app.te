@@ -1,0 +1,1 @@
+allow priv_app vendor_firmware_file:dir getattr;
