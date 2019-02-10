@@ -20,7 +20,6 @@ allow priv_app postinstall_mnt_dir:dir getattr;
 allow priv_app radio_data_file:dir getattr;
 allow priv_app system_app_data_file:dir getattr;
 allow priv_app vendor_data_file:dir read;
-allow priv_app vendor_firmware_file:dir getattr;
 
 
 
