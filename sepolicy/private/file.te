@@ -12,5 +12,7 @@ type sysfs_battery_supply, sysfs_type, fs_type;
 type qvrd_socket, file_type, mlstrustedobject, coredomain_socket;
 type vendor_bt_data_file, file_type, data_file_type;
 type vendor_tombstone_data_file, file_type, data_file_type;
-
+# path to debugfs use this whic should be only used
+# in debug builds
+type qti_debugfs, fs_type, debugfs_type;
 
