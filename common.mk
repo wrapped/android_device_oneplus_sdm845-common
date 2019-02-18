@@ -17,11 +17,22 @@
 # Get non-open-source specific aspects
 $(call inherit-product, device/oneplus/sdm845-common/hidl/hidl.mk)
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
-$(call inherit-product, device/oneplus/extras/common.mk)
+#$(call inherit-product, device/oneplus/extras/Android.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    ConfigPanel \
+    OneplusDoze \
+    com.cyanogenmod.keyhandler
+
+PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+
+# never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk

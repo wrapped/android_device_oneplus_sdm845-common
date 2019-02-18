@@ -1,0 +1,2 @@
+
+allow untrusted_app_25 qti_debugfs:dir search;

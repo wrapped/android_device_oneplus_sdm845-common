@@ -58,8 +58,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_USES_QCOM_HARDWARE := true
 
 # Platform
-# TARGET_BOARD_PLATFORM := sdm845
+#TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
+
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -142,10 +143,12 @@ PROTOBUF_SUPPORTED := true
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
-BOARD_SEPOLICY_DIRS += device/qcom/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += device/qcom/sepolicy/vendor/common
+BOARD_SEPOLICY_DIRS += device/qcom/sepolicy/vendor/ssg
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Root

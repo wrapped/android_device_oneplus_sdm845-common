@@ -3,3 +3,15 @@ allow untrusted_app camera_prop:file open;
 allow untrusted_app camera_prop:file getattr;
 
 allow untrusted_app qti_debugfs:dir search;
+
+allow untrusted_app time_daemon:unix_stream_socket connectto;
+
+allow untrusted_app bg_boot_complete_prop:file read;
+allow untrusted_app bg_daemon_prop:file read;
+allow untrusted_app bluetooth_prop:file read;
+allow untrusted_app bootloader_boot_reason_prop:file read;
+allow untrusted_app boottime_prop:file read;
+allow untrusted_app camera_prop:file read;
+allow untrusted_app cnd_vendor_prop:file read;
+allow untrusted_app runtime_event_log_tags_file:file read;
+

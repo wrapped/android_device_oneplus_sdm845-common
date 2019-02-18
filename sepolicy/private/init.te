@@ -20,10 +20,6 @@ allow init socket_device:sock_file setattr;
 allow init netutils_wrapper_exec:file execute_no_trans;
 allow init qti-testscripts:process transition;
 allow init vendor_file:file execute_no_trans;
-
-type hal_dpmqmi_hwservice, domain;
-
-allow init hal_dpmqmi_hwservice:hwservice_manager find;
 allow init netutils_wrapper_exec:file getattr;
 allow init property_socket:sock_file write;
 

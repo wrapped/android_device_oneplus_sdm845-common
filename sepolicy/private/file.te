@@ -1,18 +1,7 @@
-type adsprpcd_file, file_type;
-type bt_firmware_file, file_type;
-type firmware_file, file_type;
 type op1_file, file_type;
 type op2_file, file_type;
-type persist_file, file_type;
 type proc_touchpanel, fs_type;
-type sysfs_livedisplay, sysfs_type, fs_type;
-type sysfs_fpc_proximity, sysfs_type, fs_type;
-type sysfs_oem, sysfs_type, fs_type;
-type sysfs_battery_supply, sysfs_type, fs_type;
 type qvrd_socket, file_type, mlstrustedobject, coredomain_socket;
-type vendor_bt_data_file, file_type, data_file_type;
-type vendor_tombstone_data_file, file_type, data_file_type;
-# path to debugfs use this whic should be only used
-# in debug builds
-type qti_debugfs, fs_type, debugfs_type;
+type sysfs_oem, sysfs_type, fs_type;
+type sysfs_fpc_proximity, sysfs_type, fs_type;
 

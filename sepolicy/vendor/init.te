@@ -1,4 +1,5 @@
-
 allow init netutils_wrapper_exec:file { open read };
 allow init qti-testscripts:process transition;
 allow init socket_device:sock_file setattr;
+
+allow init hal_dpmqmi_hwservice:hwservice_manager find;

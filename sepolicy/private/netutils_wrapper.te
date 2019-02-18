@@ -1,3 +1,0 @@
-allow netutils_wrapper diag_device:chr_file { read write };
-allow netutils_wrapper self:capability sys_admin;
-
